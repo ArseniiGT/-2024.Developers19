@@ -79,20 +79,45 @@
 /*Пользователь вводит в консоль целое положительное число;
 Задача: выведите максимальную и минимальную цифру в числ*/
 
+//#include <iostream>
+//
+//int main() {
+//	int num;//123
+//	int min = INT32_MAX;
+//	std::cout << "Input number: ";
+//	std::cin >> num;
+//	do {
+//		if (num % 10 < min) {
+//			min = num % 10;
+//		}
+//		num /= 10;
+//	} while (num!=0);
+//
+//	std::cout << "Min: " << min << std::endl;
+//	return 0;
+//}
+
+
 #include <iostream>
 
-int main() {
-	int num;//123
-	int min = INT32_MAX;
-	std::cout << "Input number: ";
-	std::cin >> num;
-	do {
-		if (num % 10 < min) {
-			min = num % 10;
-		}
-		num /= 10;
-	} while (num!=0);
-
-	std::cout << "Min: " << min << std::endl;
+int main(){
+	int arr[] = {1,2,3,4,5};
+	int size;
+	std::cout << "Input count of animals: ";
+	std::cin >> size;
+	for (int i = 0; i < size; i++) {
+		std::cout << "arr[" << i << "]: ";
+		std::cin >> arr[i];
+		std::cout<<std::endl;
+	}
+	
+	/*for (int i = 0; i < 200; i++) {
+		arr[i] = i+1;
+	}*/
+	for (int i = 0; i < size; i++) {
+		std::cout << arr[i] << " ";
+	}
 	return 0;
 }
+
+
